@@ -8,11 +8,32 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15433109-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-15433109-1');
+    </script>
+
+    <script type="text/javascript" src="%PUBLIC_URL%/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="%PUBLIC_URL%/rangy/rangy-core.min.js"></script>
+	<script type="text/javascript" src="%PUBLIC_URL%/rangy/rangy-serializer.min.js"></script>
+	<script type="text/javascript" src="%PUBLIC_URL%/rangy/rangy-selectionsaverestore.min.js"></script>
+	<script type="text/javascript" src="%PUBLIC_URL%/rangy/rangy-textrange.min.js"></script>
+
+	<link rel="stylesheet" href="%PUBLIC_URL%/annotations.css" />
+	<script type="text/javascript" src="%PUBLIC_URL%/annotations.js"></script>
+
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Asap|Merriweather|Courgette|Handlee" type="text/css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -22,7 +43,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Grenard Madrigal - React/Redux Portfolio</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

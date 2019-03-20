@@ -1,0 +1,373 @@
+
+.no-copy-area
+{
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+}
+
+.annotator
+{
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    right: 20px;
+    width: 200px;
+}
+
+.annotator.fixed
+{
+    position: fixed;
+    bottom: 0;
+    top: auto !important;
+    left: 100px;
+    width: 400px;
+    /* background-color: #cccccc; */
+}
+
+.annotator.fixed .annotation
+{
+    /* position: relative; */
+    top: auto !important;
+    bottom: 0;
+    margin-bottom: -100%;
+    width: 400px;
+}
+
+
+
+.annotator.fixed .annotation.active
+{
+    /* position: relative; */
+    display: block;
+    margin-bottom: 0;
+    transition: margin-bottom 0.5s;
+}
+
+.annotator.fixed .annotation.orphan
+{
+    position: absolute;
+    /* TODO: figure out how to get it to stick to the right or bottom of entire article without using jquery */
+}
+
+.annotation
+{
+    width: 200px;
+    min-height: 100px;
+    /* background-color: #22e0ff; */
+    background-color: #22b8ff;
+    padding: 10px;
+    margin-top:4px;
+    position: absolute;
+    right: 4px;
+    z-index: 40;
+}
+
+.annotation.active
+{
+    z-index: 41;
+}
+
+.highlighted-text
+{
+    color: #222233;
+    cursor: pointer;
+}
+
+.annotation .highlighted-text
+{
+    cursor: default;
+}
+
+.highlighted-text.highlight-green, .highlighted-text.highlight-green p
+{
+    background-color: #43ff40;
+    padding: 4px 0;
+}
+
+.highlighted-text.highlight-pink, .highlighted-text.highlight-pink p
+{
+    background-color: #ff9797;
+    padding: 4px 0;
+}
+
+.highlighted-text.circle,.highlighted-text.box,.highlighted-text.underline,
+.highlighted-text.circle p, .highlighted-text.box p, .highlighted-text.underline p
+{
+    border: 2px solid #0088ff;
+}
+
+.highlighted-text.circle
+{
+    border-color: #ff0000;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.highlighted-text.box
+{
+
+    border-color: #a900ff;
+    padding: 6px 0;
+}
+
+.highlighted-text.underline
+{
+    border-width: 0 0 4px 0;
+    text-decoration: none;
+}
+
+.highlighted-text.active
+{
+    outline: dashed 1px #0088ff;
+    color: #ff8800;
+}
+
+.highlighted-text.circle.active, .highlighted-text.box.active
+{
+    outline: 0;
+    border-style: dotted;
+}
+
+.highlighted-text.highlight-pink.active
+{
+    color: #fff9a2;
+}
+
+.annotator .annotation:hover
+{
+    background-color: #22d0ff;
+}
+
+.annotator .annotation.active
+{
+    background-color: #22d0ff;
+    margin-right: 50px;
+    transition: margin-right 0.5s;
+}
+
+.annotator .annotation.orphan
+{
+    background-color: #b2c4e0;
+    position: relative;
+}
+
+.annotator .annotation .highlighted-text
+{
+    font-size: 12px;
+    line-height: 16px;
+    display: none;
+}
+
+.annotator .annotation.orphan .highlighted-text
+{
+    display: block;
+    padding: 2px 4px;
+    margin-right: 8px;
+    background-color: #fff389;
+}
+
+
+.annotator.fixed .annotation.orphan .highlighted-text
+{
+    position: absolute;
+    bottom: 104%;
+}
+
+
+.annotation textarea
+{
+    width: 100%;
+    margin-top: 4px;
+    display: block;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.annotation .removeButton
+{
+    color: #ffffff;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 4px;
+    display: inline;
+    padding: 2px 4px;
+    margin-left: 4px;
+}
+
+.annotation .removeButton:hover
+{
+    color: #ffcccc;
+    background-color: #ee4444;
+}
+
+.annotation .tooltip_orphan
+{
+    float: right;
+    display: none;
+}
+
+.annotation.orphan .tooltip_orphan
+{
+    display: block;
+}
+
+.annotation-options
+{
+    display: none;
+    top: 100px;
+    right: 100px;
+    position: absolute;
+    z-index: 9999;
+    /* background-color: rgba(0, 125, 255, 0.4) */
+}
+
+.annotation-options .toggle-options
+{
+    outline: none;
+    float: left;
+    background-color: #aabfde;
+    padding: 6px;
+}
+
+.annotation-options .annotation-option
+{
+    display: none;
+    margin-left: 2px;
+    outline: none;
+    float: left;
+    height: 36px;
+    clear: none;
+}
+
+.annotation-options.open .annotation-option
+{
+    display: block;
+}
+
+.annotator .annotation .prev-annotation,.annotator .annotation .next-annotation
+{
+    color: #cccccc;
+    display: inline-block;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.annotator .annotation.active .prev-annotation,.annotator .annotation.active .next-annotation,
+.annotator .annotation:hover .prev-annotation,.annotator .annotation:hover .next-annotation
+{
+    color: #ffffff;
+}
+
+.annotator .annotation.orphan .prev-annotation,.annotator .annotation.orphan .next-annotation
+{
+    color: #ffffff;
+}
+
+#list_annotation-markers
+{
+    margin-top: 4px;
+}
+
+#list_annotation-markers .annotation-marker
+{
+    width: 24px;
+    height: 20px;
+    padding-top: 4px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    color: #555566;
+    background-color: #a2f2ff;
+    border-radius: 50%;
+    float: left;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+#list_annotation-markers .annotation-marker.orphan
+{
+    background-color: #cccccc;
+}
+
+#list_annotation-markers .annotation-marker:hover
+{
+    background-color: #22b8ff;
+}
+
+.rspopup
+{
+    display: none !important;
+}
+
+
+/* annotation review */
+
+button.annotation-grade
+{
+    font-weight: normal;
+    outline: 0;
+    float: left;
+    clear: none;
+    margin-right: 4px;
+}
+
+button.annotation-grade-plus
+{
+    font-size: 24px;
+    padding: 3px 10px;
+    top: 2px;
+}
+
+button.annotation-grade-check
+{
+    font-size: 18px;
+    padding: 6px 10px;
+}
+
+button.annotation-grade-minus
+{
+    font-size: 24px;
+    padding: 3px 10px;
+}
+
+#button_show-annotation-feedback, #button_save-annotation-feedback
+{
+    padding: 10px 12px 10px 12px;
+    float: left;
+    clear: none;
+    outline: 0;
+}
+
+#button_save-annotation-feedback
+{
+    display: none;
+}
+
+button.button-pencil-icon
+{
+    background-image: url(/_images/_structure/icon_pencil.png);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px 9px;
+    padding-left: 30px !important;
+}
+
+#panel_annotation-feedback
+{
+    display: none;
+    top: 44px;
+}
+
+#textarea_annotation-feedback
+{
+    padding: 12px;
+    width: 500px;
+    height: 100px;
+    border: 4px solid #5b6f84;
+    border-top: 0;
+    outline: 0;
+}

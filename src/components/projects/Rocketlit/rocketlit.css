@@ -1,0 +1,129 @@
+.panel_rocketlit .panel_hero
+{
+    background-color: #08f;
+    background-size: cover;
+    background-image: url('./reading-on-the-roof.jpg');
+    background-repeat: no-repeat;
+    background-position: center 15%;
+    min-height: 600px;
+    text-align: left;
+    transition: background-position 3s;
+}
+
+.panel_rocketlit .panel_hero:hover
+{
+    background-position: center 50%;
+}
+
+
+.panel_rocketlit .panel_hero .logo_rocketlit
+{
+    margin-top: 40px;
+    width: 500px;
+    height: auto;
+}
+
+.panel_rocketlit .panel_hero h1
+{
+    font-family: Asap, Arial, sans-serif;
+    font-size: 42px;
+    letter-spacing: -1px;
+    color: #3d4260;
+    text-shadow: #e9f0f8 2px 2px 4px;
+    max-width: 540px;
+}
+
+.panel_rocketlit .project-link
+{
+    color: #f9bd86;
+}
+
+.panel_rocketlit .logo
+{
+
+}
+
+
+/* annotations */
+
+#panel_annotations
+{
+    /* padding-bottom: 80px; */
+}
+
+.articleHeader
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.articleHeader h1
+{
+    color: #08f;
+    font-size: 28px;
+}
+
+.articleHeader .vocabularyWords
+{
+    color: #7861ea;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.articleHeader .unitTitle
+{
+    color: #aaa;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.articleBody
+{
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+}
+
+.annotation-options
+{
+    position: fixed;
+}
+
+.button6
+{
+    background-color: #aabfe1;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .panel_rocketlit .panel_hero,
+    .panel_rocketlit .panel_hero:hover
+    {
+        min-height: 325px;
+        text-align: center;
+        background-position: 50% 50%;
+    }
+
+    .panel_rocketlit .panel_hero h1
+    {
+        font-size: 22px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .panel_rocketlit .panel_hero .logo_rocketlit
+    {
+        width: 250px;
+    }
+
+    .panel_rocketlit .project-details .logo_rocketlit
+    {
+        display: none;
+    }
+}

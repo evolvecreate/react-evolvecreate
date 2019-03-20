@@ -1,0 +1,26 @@
+.panel_wpromote .panel_hero
+{
+    background-color: #08f;
+    background-size: cover;
+    background-image: url('./wpromote-blog-content.png');
+    background-repeat: no-repeat;
+    background-position: center 10%;
+    min-height: 600px;
+    text-align: left;
+    transition: background-position 3s;
+}
+
+.panel_wpromote .panel_hero:hover
+{
+    background-position: center 50%;
+}
+
+.panel_wpromote .project-link
+{
+    color: #ffc5ef;
+}
+
+.contentBox-pink
+{
+    background-color: #fd8484;
+}

@@ -1,0 +1,69 @@
+
+.panel_projects
+{
+    padding-top: 40px;
+}
+
+.panel_bio
+{
+    margin-top: 40px;
+}
+
+.panel_bio .bio
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.panel_bio .bio h1
+{
+    font-family: Handlee, arial, sans-serif;
+}
+
+.panel_bio .bio h1 .name,
+.panel_bio .bio h2 strong
+{
+    color: #ff6ee4;
+}
+
+.panel_bio .bio h1 strong
+{
+
+}
+
+.panel_bio .bio h2
+{
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+    .panel_projects
+    {
+        padding-top: 0;
+    }
+
+    .panel_bio
+    {
+        margin-top: 0;
+    }
+
+    .panel_bio .bio h1
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .panel_bio .bio h2
+    {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
